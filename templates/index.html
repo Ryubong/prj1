@@ -75,23 +75,21 @@
             <label for="New_Recruitment_Range">신규 채용:</label>
             <input type="range" name="New Recruitment" id="New_Recruitment_Range" min="0" max="1" value="0.5" step="0.01" oninput="updateTextInput(this.value, 'New_Recruitment_Text')">
             <span id="New_Recruitment_Text">0</span><br>
-            
 
             <label for="resignation_retirement">이직 및 은퇴:</label>
             <input type="range" name="resignation_retirement" id="resignation_retirement" min="0" max="1" value="0.5" step="0.01" oninput="updateTextInput(this.value, 'resignation_retirement_Text')">
-            <span id="resignation_retirement_Text">0</span><br>
-    
+            <span id="resignation_retirement_Text">0</span><br>    
+
             <label for="female_workers">여성 직원 (합):</label>
             <input type="range" name="female_workers" id="female_workers" min="0" max="1" value="0.5" step="0.01" oninput="updateTextInput(this.value, 'female_workers_Text')">
-            <span id="female_workers_Text">0</span><br>
-    
+            <span id="female_workers_Text">0</span><br>    
+
             <label for="training_hours">교육 시간 int:</label>
             <input type="range" name="training_hours" id="training_hours" value="0" step="1" oninput="updateTextInput(this.value, 'training_hours_Text')">
             <span id="training_hours_Text">0</span><br>
     
             <label for="social_contribution">사회 기여및 공헌 int:</label>
-            <input type="text" name="industrial_accident" id="industrial_accident"><br>
-
+            <input type="text" name="social_contribution" id="social_contribution"><br>
 
             <label for="industrial_accident">산업 재해:</label>
             <input type="text" name="industrial_accident" id="industrial_accident"><br>
@@ -104,7 +102,7 @@
             function updateTextInput(value, spanId) {
                 document.getElementById(spanId).innerText = value;
             }
-        
+
             // Set the default active tab (E section)
             document.getElementById("E").style.display = "block";
             document.getElementsByClassName("tab-button")[0].classList.add("active");
