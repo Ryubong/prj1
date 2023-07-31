@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESG 등급 예측 사이트</title>
+</head>
+<body>
+    <h1>S 등급 예측</h1>
+    <form method="POST" action="/">
+        <label for="New Recruitment">신규 채용:</label>
+        <input type="text" name="New Recruitment" id="New Recruitment"><br>
+
+        <label for="resignation_retirement">이직 및 은퇴:</label>
+        <input type="text" name="resignation_retirement" id="resignation_retirement"><br>
+
+        <label for="female_workers">여성 직원 (합):</label>
+        <input type="text" name="female_workers" id="female_workers"><br>
+
+        <label for="training_hours">교육 시간 int:</label>
+        <input type="text" name="training_hours" id="training_hours"><br>
+
+        <label for="social_contribution">사회 기여및 공헌 int:</label>
+        <input type="text" name="social_contribution" id="social_contribution"><br>
+
+        <label for="industrial_accident">산업 재해:</label>
+        <input type="text" name="industrial_accident" id="industrial_accident"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if predicted_grade %}
+        <h2>예상되는 ESG의 사회 점수는 {{ predicted_grade }} 입니다.</h2>
+    {% endif %}
+</body>
+</html>
